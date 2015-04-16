@@ -5,8 +5,8 @@ describe("odd: 偶数を判定する関数", function(){
       odd(2000).should.equal(true);
     });
     it("奇数のときは false を返す", function(){
-      odd(3).should.equal(true);
-      odd(21).should.equal(true);
+      odd(3).should.equal(false);
+      odd(21).should.equal(false);
     });
   });
 

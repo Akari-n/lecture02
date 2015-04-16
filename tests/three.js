@@ -1,7 +1,7 @@
 describe("three: 3の倍数の時だけ違うものを返す", function(){
   context("引数が数値のとき", function(){
-    it("3の倍数のときは buzz を返す", function(){
-      three(3).should.equal("buzz");
+    it("3の倍数のときは fizz を返す", function(){
+      three(3).should.equal("fizz");
       three(9).should.equal("fizz");
     });
     it("そうでない場合は 引数の値をそのまま返す", function(){
