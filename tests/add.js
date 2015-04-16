@@ -12,9 +12,9 @@ describe("add: 二つの引数の値を足す関数", function(){
 
   context("引数の片方が文字列のとき", function(){
     it("NaNを返す", function(){
-      add("0", 1).should.equal(NaN);
-      add(1, "1").should.equal(NaN);
-      add("hoge", "fuga").should.equal(NaN);
+      Number.isNaN(add("0", 1)).should.equal(true);
+      Number.isNaN(add(1, "1")).should.equal(true);
+      Number.isNaN(add("hoge", "fuga")).should.equal(true);
     });
   });  
 

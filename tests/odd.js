@@ -1,12 +1,12 @@
-describe("odd: 偶数を判定する関数", function(){
+describe("odd: 奇数を判定する関数", function(){
   context("引数が数値のとき", function(){
-    it("偶数のときは true を返す", function(){
-      odd(2).should.equal(true);
-      odd(2000).should.equal(true);
+    it("奇数のときは true を返す", function(){
+      odd(3).should.equal(true);
+      odd(2001).should.equal(true);
     });
-    it("奇数のときは false を返す", function(){
-      odd(3).should.equal(false);
-      odd(21).should.equal(false);
+    it("偶数のときは false を返す", function(){
+      odd(4).should.equal(false);
+      odd(100).should.equal(false);
     });
   });
 
