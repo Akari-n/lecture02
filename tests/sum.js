@@ -15,27 +15,27 @@ describe("sum: 二つの引数の間にある整数の総和を計算する関�
       });
     });
     context("第1引数が、第2引数が等しいとき", function(){
-      it("二つの数の合計を返す", function(){
-        sum(10, 10).should.equal(20);
-        sum(5, 5).should.equal(10);
-        sum(-10, -10).should.equal(-20);
+      it("第1引数の値を返す", function(){
+        sum(10, 10).should.equal(10);
+        sum(5, 5).should.equal(5);
+        sum(-10, -10).should.equal(-10);
       });
     });    
   });
 
   context("引数の片方が実数のとき", function(){
     it("NaNを返す", function(){
-      sum(3.14, 5).should.equal(NaN);
-      sum(3, 7.89).should.equal(NaN);
-      sum(3.14, 7.89).should.equal(NaN);
+      Number.isNaN(sum(3.14, 5)).should.equal(true);
+      Number.isNaN(sum(3, 7.89)).should.equal(true);
+      Number.isNaN(sum(3.14, 7.89)).should.equal(true);
     });
   });
 
   context("引数の片方が文字列のとき", function(){
     it("NaNを返す", function(){
-      sum("0", 1).should.equal(NaN);
-      sum(1, "1").should.equal(NaN);
-      sum("hoge", "fuga").should.equal(NaN);
+      Number.isNaN(sum("0", 1)).should.equal(true);
+      Number.isNaN(sum(1, "1")).should.equal(true);
+      Number.isNaN(sum("hoge", "fuga")).should.equal(true);
     });
   });  
 
